@@ -1,4 +1,4 @@
-package com.nab.doanngo.weathersapp.presentation
+package com.nab.doanngo.weathersapp.presentation.features
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -3,6 +3,7 @@ package com.nab.doanngo.weathersapp.presentation.base
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.FlowCollector
@@ -40,12 +41,11 @@ abstract class BaseViewModel<S : Any, E> : ViewModel(), StoreObservable<S> {
     }
 
     fun observeEvent(
-        lifecycleScope: CoroutineScope,
         viewLifecycleOwner: LifecycleOwner,
         listenState: Lifecycle.State = Lifecycle.State.CREATED,
         collector: FlowCollector<E>
     ) {
-        lifecycleScope.launch {
+        viewLifecycleOwner.lifecycleScope.launch {
             if (listenState == Lifecycle.State.INITIALIZED) {
                 events.collect(collector)
             } else {

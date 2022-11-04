@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">Weathers</string>
+    <string name="app_name">Weather Forecast</string>
+
+    <!-- region All -->
+    <string name="all_unknown">Unknown</string>
+    <string name="all_percentage_format">%d%%</string>
+    <!-- endregion -->
+
+    <!-- region City weather search screen -->
+    <string name="city_weather_search_search_edt_hint">Enter city name to search</string>
+    <string name="city_weather_search_search_button">Get Weather</string>
+    <string name="city_weather_search_empty_text">There is no result with \"%s\"</string>
+    <!-- endregion -->
+
+    <!-- region Weather forecast day item-->
+    <string name="item_weather_forecast_day_date_statement">Date: %s</string>
+    <string name="item_weather_forecast_day_date_format">EEE, dd MMM yyyy</string>
+    <string name="item_weather_forecast_day_temperature_statement">Average temperature: %s</string>
+    <string name="item_weather_forecast_day_pressure_statement">Pressure: %s</string>
+    <string name="item_weather_forecast_day_humidity_statement">Humidity: %s</string>
+    <string name="item_weather_forecast_day_description_statement">Description: %s</string>
+    <!-- endregion -->
 </resources>
