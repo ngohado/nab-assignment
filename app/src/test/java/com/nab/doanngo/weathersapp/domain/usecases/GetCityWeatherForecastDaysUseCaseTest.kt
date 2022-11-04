@@ -26,9 +26,9 @@ import org.mockito.kotlin.verify
 import java.util.Date
 
 // region Mock data
-private const val cityNameMock = "Hanoi"
+const val cityNameMock = "Hanoi"
 
-private val cityWeatherInfoMock = CityWeatherInformation(
+val cityWeatherInfoMock = CityWeatherInformation(
     city = City(
         id = 123,
         country = "Vn",
