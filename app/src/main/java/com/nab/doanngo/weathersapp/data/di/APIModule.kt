@@ -42,9 +42,15 @@ class APIModule {
     @Provides
     @Singleton
     fun provideWeatherAPIService(okHttpClient: OkHttpClient): WeatherAPIService {
+        val config = Json {
+            encodeDefaults = true
+            ignoreUnknownKeys = true
+            explicitNulls = false
+            prettyPrint = true
+        }
         val responseContentType = "application/json".toMediaType()
         return Retrofit.Builder()
-            .addConverterFactory(Json.asConverterFactory(responseContentType))
+            .addConverterFactory(config.asConverterFactory(responseContentType))
             .baseUrl(WEATHER_MAIN_URL)
             .client(okHttpClient)
             .build()

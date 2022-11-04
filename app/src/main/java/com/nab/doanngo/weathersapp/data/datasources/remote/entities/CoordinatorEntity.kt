@@ -4,6 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class CoordinatorEntity(
-    val lat: Double,
-    val lon: Double
+    val lat: Double?,
+    val lon: Double?
 )
