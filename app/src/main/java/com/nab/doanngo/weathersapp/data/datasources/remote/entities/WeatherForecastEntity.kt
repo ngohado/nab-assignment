@@ -39,6 +39,7 @@ fun WeatherForecastEntity.toDto(temperatureUnit: TemperatureUnit): WeatherForeca
         speed = speed,
         sunriseTime = sunrise.secondTimestampToDate(),
         sunsetTime = sunset.secondTimestampToDate(),
+        weatherSummary = weather.firstOrNull()?.toDto(),
         temperatureUnit = temperatureUnit
     )
 

@@ -15,5 +15,6 @@ data class WeatherForecast(
     val speed: Double,
     val sunriseTime: Date,
     val sunsetTime: Date,
+    val weatherSummary: WeatherSummary?,
     val temperatureUnit: TemperatureUnit
 )

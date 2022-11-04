@@ -4,6 +4,7 @@ import com.nab.doanngo.weathersapp.domain.models.dtos.City
 import com.nab.doanngo.weathersapp.domain.models.dtos.CityWeatherInformation
 import com.nab.doanngo.weathersapp.domain.models.dtos.TemperatureUnit
 import com.nab.doanngo.weathersapp.domain.models.dtos.WeatherForecast
+import com.nab.doanngo.weathersapp.domain.models.dtos.WeatherSummary
 import com.nab.doanngo.weathersapp.domain.models.exceptions.CityNotFoundException
 import com.nab.doanngo.weathersapp.domain.repositories.CityWeatherRepository
 import kotlinx.coroutines.Dispatchers
@@ -47,6 +48,11 @@ private val cityWeatherInfoMock = CityWeatherInformation(
             speed = 50.0,
             sunriseTime = Date(),
             sunsetTime = Date(),
+            weatherSummary = WeatherSummary(
+                id = 500,
+                description = "light rain",
+                main = "Rain"
+            ),
             temperatureUnit = TemperatureUnit.Celsius
         )
     )
